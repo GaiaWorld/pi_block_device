@@ -1,0 +1,27 @@
+[package]
+name = "pi_file_block_device"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+authors = ["vmos <vmosone007@gmail.com>"]
+description = "Async file-backed block-device backend"
+license = "MIT"
+repository = "http://ser.yinengyun.com:10082/tech/pi_block_device.git"
+readme = "README.md"
+keywords = ["storage", "block-device", "async", "filesystem"]
+categories = ["asynchronous", "filesystem"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+pi_block_device = { path = "../pi_block_device", version = "0.2.0" }
+bytes = "=1.12.1"
+futures-core = "=0.3.34"
+futures-lite = "=2.6.1"
+pi_async_fs = "=0.1.2"
+async-lock = "=3.4.2"
+
+[dev-dependencies]
+blocking = "=1.7.0"
+tempfile = "3"

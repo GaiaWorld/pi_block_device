@@ -1,0 +1,36 @@
+[package]
+name = "pi_superblock"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+authors = ["vmos <vmosone007@gmail.com>"]
+description = "Durable superblock metadata and transaction state"
+license = "MIT"
+repository = "http://ser.yinengyun.com:10082/tech/pi_block_device.git"
+readme = "README.md"
+keywords = ["storage", "superblock", "transaction", "async"]
+categories = ["asynchronous", "filesystem"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[features]
+default = []
+test-support = []
+
+[dependencies]
+arc-swap = "=1.9.2"
+smallvec = "=1.15.2"
+rpds = "=1.1.0"
+pi_block_device = { path = "../pi_block_device", version = "0.2.0" }
+pi_append_log = { path = "D:/dev/pi_append_log", version = "=0.4.0" }
+pi_async_fs = "=0.1.2"
+pi_result = "=0.1.1"
+bytes = "=1.12.1"
+futures-core = "=0.3.34"
+futures-lite = "=2.6.1"
+async-lock = "=3.4.2"
+
+[dev-dependencies]
+pi_file_block_device = { path = "../pi_file_block_device", version = "0.1.0" }
+tempfile = "=3.27.0"

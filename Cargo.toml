@@ -1,0 +1,7 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/pi_block_device",
+    "crates/pi_file_block_device",
+    "crates/pi_superblock",
+]
